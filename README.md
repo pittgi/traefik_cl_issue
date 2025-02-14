@@ -1,3 +1,5 @@
+Credits to @lpisu98 for helping to investigate this issue.
+
 # How to replicate
 
  1. Setup wireshark to capture HTTP/3 and HTTP/2 secrets (see below) and start capturing
