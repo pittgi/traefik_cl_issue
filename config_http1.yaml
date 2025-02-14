@@ -1,0 +1,21 @@
+http:
+  routers:
+    my-router:
+      entryPoints:
+        - web3
+      rule: "Host(`localhost`)"
+      service: my-service
+      tls: {}
+
+  services:
+    my-service:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:8080"
+
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /path/to/cert.pem
+        keyFile: /path/to/key.pem

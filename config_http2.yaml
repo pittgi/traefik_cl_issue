@@ -1,0 +1,27 @@
+http:
+  routers:
+    my-router:
+      entryPoints:
+        - web3
+      rule: "Host(`localhost`)"
+      service: my-service
+      tls: {}
+
+  services:
+    my-service:
+      loadBalancer:
+        serversTransport: h2-transport
+        servers:
+          - url: "https://localhost:8443"
+        passHostHeader: true
+
+  serversTransports:
+    h2-transport:
+      insecureSkipVerify: true
+
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /path/to/cert.pem
+        keyFile: /path/to/key.pem
