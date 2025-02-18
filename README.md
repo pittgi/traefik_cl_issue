@@ -19,7 +19,7 @@ Credits to @lpisu98 for helping to investigate this issue.
 
 # Setup Wireshark
 
- 1. Edit attacker.py PATH_TO_TLS_SECRECTS (example "~/keys.log")
- 2. Run in terminal: `export SSLKEYLOGFILE_="/home/$USER/keys.log"`
+ 1. Edit attacker.py PATH_TO_TLS_SECRECTS (example "/home/USER/keys.log")
+ 2. Run in terminal: `export SSLKEYLOGFILE_="/home/USER/keys.log"`
  3. Run http2 server in same terminal instance
  4. Same path into Wireshark -> Edit -> Preferences -> (Left) Protocols -> TLS -> (Pre)-Master-Secret log filname
